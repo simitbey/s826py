@@ -1,4 +1,4 @@
-# s826py -> Controlling the Sensoray 826 PCIE Expansion Board with Python
+# s826py -> Controlling the Sensoray 826 PCIE Board with Python
 
 The s826py allows robust control of voltage for channels that the Sensoray 826 PCIE Expansion Board use.
 
