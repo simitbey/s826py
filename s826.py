@@ -9,17 +9,17 @@ if platform.system() == 'Darwin':
     def detectBoard():
         return "Using Mac OS, no S826 board available"
 else:
-    maindll = cdll.LoadLibrary("./main4.dll")
-    id = maindll.detectBoard()
-    maindll.SetVoltOut.argtypes = [c_int, c_int, c_float]
+    s826dll = cdll.LoadLibrary("./s826py_rev4.dll")
+    id = s826dll.detectBoard()
+    s826dll.SetVoltOut.argtypes = [c_int, c_int, c_float]
 
 
     def setChanVolt(chan, volt):
-        maindll.SetVoltOut(0, int(chan), float(volt))
+        s826dll.SetVoltOut(0, int(chan), float(volt))
 
 
     def detectBoard():
-        return maindll.detectBoard()
+        return s826dll.detectBoard()
 
 
 
